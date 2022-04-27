@@ -27,7 +27,6 @@
 
 <script setup lang="ts">
 import AMapLoader from '@amap/amap-jsapi-loader'
-import { objectExpression } from '@babel/types';
 import { shallowRef, ref, reactive } from '@vue/reactivity'
 import { onMounted } from 'vue'
 
@@ -111,7 +110,6 @@ const markerInof = reactive<MarkerList>({
 const showMarkerInfo = (e: any, content: MarkerList) => {
     showModal.value = true
     Object.assign(markerInof, content)
-    console.log(markerInof)
 }
 
 // 地理位置编码  如果地址有省市区则不用指定city
@@ -119,7 +117,7 @@ interface Lnglat {
     lng: string,
     lat: string
 }
-const geocoder = (address: string, city: string = '010') => {
+const geocoder = (address: string, city?: string) => {
     return new Promise<Lnglat>((resolve, reject) => {
         new AMap.value.Geocoder({})  // city 指定进行编码查询的城市，支持传入城市名、adcode 和 citycode
             // 正向地理编码函数

@@ -80,7 +80,7 @@ const markerArray = reactive<Array<MarkerList>>([
     { title: "天安门站点", lnglat: "北京市东城区天安门", content: "天安门站点相关信息" },
     { title: "潍坊市站点", lnglat: "山东省潍坊市潍坊火车站", content: "站点3相关信息" },
     // { title: "站点4", lnglat: [116.33018006298826, 39.82825742321834], content: "站点4相关信息" },
-    // { title: "站点5", lnglat: [116.46888245556639, 39.88834578068886], content: "站点5相关信息" },
+    // { title: "站点5", lnglat: [116.46888220556639, 39.88832078068886], content: "站点5相关信息" },
 ])
 
 // 添加点标记
@@ -191,15 +191,15 @@ const mapSearch = () => {
 
 .map-box-search {
     position: absolute;
-    top: 45px;
-    right: 45px;
+    top: 20px;
+    right: 20px;
     width: 400px;
 }
 
 .map-box-list {
     position: absolute;
-    top: 45px;
-    left: 45px;
+    top: 20px;
+    left: 20px;
     background-color: #fff;
     width: 300px;
     padding: 10px;

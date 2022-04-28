@@ -1,7 +1,7 @@
 <template>
     <div class="nav">
         <div class="logo" @click="goHome">
-            <img src="@/assets/naivelogo.93278402.svg" />
+            <img src="@/assets/naivelogo.svg" />
             <span>Naive UI</span>
         </div>
     </div>
@@ -23,11 +23,13 @@ const goHome = (): void => {
 .nav {
     display: grid;
     font-size: 18px;
+
     .logo {
         display: flex;
         align-items: center;
         width: 120px;
         cursor: pointer;
+
         img {
             height: 32px;
             margin-right: 12px;

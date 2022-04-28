@@ -6,7 +6,7 @@
 <script setup lang="ts">
 import { h, watchEffect, ref, Component } from 'vue'
 import { NIcon, useMessage } from 'naive-ui'
-import { BookOutline as BookIcon, MapOutline } from '@vicons/ionicons5'
+import { BookOutline as BookIcon, MapOutline, CodeSlashOutline } from '@vicons/ionicons5'
 import type { MenuOption } from 'naive-ui'
 import { RouterLink } from 'vue-router'
 import { useRoute } from 'vue-router'
@@ -78,6 +78,19 @@ const menuOptions = [
         ),
         key: 'map',
         icon: renderIcon(MapOutline)
+    },
+    {
+        label: () => h(
+            RouterLink,
+            {
+                to: {
+                    name: 'react-components',
+                }
+            },
+            { default: () => 'React' }
+        ),
+        key: 'react-components',
+        icon: renderIcon(CodeSlashOutline)
     },
 ]
 

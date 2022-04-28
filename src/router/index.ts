@@ -10,7 +10,9 @@ const routes: Array<RouteRecordRaw> = [
             { path: 'avatar', name: 'avatar', component: () => import('views/Avatar.vue') },
             { path: 'form', name: 'form', component: () => import('views/Form.vue') },
             { path: 'table', name: 'table', component: () => import('views/Table.vue') },
-            { path: 'map', name: 'map', component: () => import('views/Map.vue') }
+            { path: 'map', name: 'map', component: () => import('views/Map.vue') },
+            // mirco子应用 react-components
+            { path: 'react-components/:page*', name: 'react-components', component: () => import('views/ReactComponents.vue') }
         ]
     }
 ]

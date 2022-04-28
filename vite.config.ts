@@ -10,7 +10,14 @@ const pathResolve = (dir: string) => resolve(__dirname, dir)
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    vue(),
+    vue({
+      template: {
+        // 防止非vue组件micro-app告警 
+        compilerOptions: {
+          isCustomElement: tag => tag.startsWith('micro-')
+        }
+      }
+    }),
     Components({
       resolvers: [NaiveUiResolver()]
     })
